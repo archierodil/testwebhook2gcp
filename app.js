@@ -169,7 +169,13 @@ if(change.field == 'events'){
 console.log('test 1401 inside events');	
  //start of 1st graph call	
 //the code below gets the event name	   
-https.get('https://graph.facebook.com/' + change.value.event_id + '?fields=name,start_time,end_time,place,description&access_token=DQVJ2WGg4NGlrLXFVR2pWdkp1MWhPYUxoNllaZAXVtSEJqZAFg1ZAURDd1hQNFNneVRTTjA4Ry1EbXI2VXA4OVQ5aUlXbGFYOU9HOXR1djlKUG5FR2pyRzlQc1VwNDU5S1J6Yjdzb1lSU0o1ZA25NOFJUVm1leGVMR0lQVWFJT0tFako3d0ZAHY1hQR2ZAmUkFOTkExbHZAGd210bjNsdW84NjZAVeXBmUW9wbmlxaUx0YVBSMXlua25YaW9RTW52bmVrMlU0eWRhZAGdnc3lieWVyQUVFMQZDZD', (resp) => {
+https.get('https://graph.facebook.com/' + change.value.event_id + '?fields=name,start_time,end_time,place,description&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllI
+
+MWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2
+
+bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWW
+
+DJnZAEdvNXZAtNgZDZD', (resp) => {
   let dataevent = '';
   resp.on('data',(chunk) => {
 	  dataevent += chunk;  
@@ -193,7 +199,13 @@ https.get('https://graph.facebook.com/' + change.value.event_id + '?fields=name,
   //start of 2nd graph call
   //the code below gets the user's name		  
 	  
-https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&access_token=DQVJ2WGg4NGlrLXFVR2pWdkp1MWhPYUxoNllaZAXVtSEJqZAFg1ZAURDd1hQNFNneVRTTjA4Ry1EbXI2VXA4OVQ5aUlXbGFYOU9HOXR1djlKUG5FR2pyRzlQc1VwNDU5S1J6Yjdzb1lSU0o1ZA25NOFJUVm1leGVMR0lQVWFJT0tFako3d0ZAHY1hQR2ZAmUkFOTkExbHZAGd210bjNsdW84NjZAVeXBmUW9wbmlxaUx0YVBSMXlua25YaW9RTW52bmVrMlU0eWRhZAGdnc3lieWVyQUVFMQZDZD', (resp) => {
+https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllI
+
+MWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2
+
+bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWW
+
+DJnZAEdvNXZAtNgZDZD', (resp) => {
   let datausername = '';
   resp.on('data',(chunk) => {
 	  datausername += chunk;  
@@ -211,7 +223,7 @@ https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&acce
 	  console.log('attendee_name =' + attendee_name);
 	  console.log('attendee_email =' + attendee_email);
 //start of appscript call	  
-	 https.get('https://script.google.com/macros/s/AKfycbx5m7fyjxlQfjoJXGPTT649xugH5iWpfShSuubluVBnjUkArSM/exec?wpEventName=' + event_name  + '&wpID=' + change.value.event_id + '&wpName=' + attendee_name + '&wpVerb=' + change.value.verb + '&wpEmail=' + attendee_email + '&wpStart=' + start_datetime + '&wpEnd=' + end_datetime + '&wpLocation=' + event_location + '&wpDescription=' + event_description , (resp) => {
+	 https.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEventName=' + event_name  + '&wpID=' + change.value.event_id + '&wpName=' + attendee_name + '&wpVerb=' + change.value.verb + '&wpEmail=' + attendee_email + '&wpStart=' + start_datetime + '&wpEnd=' + end_datetime + '&wpLocation=' + event_location + '&wpDescription=' + event_description , (resp) => {
   let datashrek = '';
 
   // A chunk of data has been recieved.
@@ -256,7 +268,7 @@ console.log('attendeename = ' + attendee_name);
 else{
 console.log('1401-1-before returned value' );  
 
-  https2.get('https://script.google.com/macros/s/AKfycbzcDZGjQHpp8VNA3vyFKGAunBvtM3eu5M8D7oEQIVMnYsR7JFAw/exec',(resp) => {
+  https2.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec',(resp) => {
   let datashrek1101 = '';
 
   console.log('resp = ' + resp.responseUrl);		
@@ -281,7 +293,7 @@ console.log('returned value =0 ' );
 	
 
 	
-	https.get('https://script.google.com/macros/s/AKfycbx5m7fyjxlQfjoJXGPTT649xugH5iWpfShSuubluVBnjUkArSM/exec?wpEvent=' + change.value + '&wpID=' + change.id + '&wpName=noname' + '&wpVerb=noaction', (resp) => {
+	https.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEvent=' + change.value + '&wpID=' + change.id + '&wpName=noname' + '&wpVerb=noaction', (resp) => {
   let datashrek = '';
 
   // A chunk of data has been recieved.
