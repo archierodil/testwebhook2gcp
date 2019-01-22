@@ -117,13 +117,13 @@ function processPageEvents(data) {
 		// Chat messages sent to the page
     if(entry.messaging) {
       entry.messaging.forEach(function(messaging_event){
-        console.log('Process Page Events Messaging AER 1601',page_id,messaging_event);
+        console.log('Process Page Events Messaging AER 1601 TEST GCP',page_id,messaging_event);
       });
     }
 		// Page related changes, or mentions of the page
     if(entry.changes) {
       entry.changes.forEach(function(change){
-        console.log('Process Page Events Changes AER 1601',page_id,change);
+        console.log('Process Page Events Changes AER 1601 TEST GCP',page_id,change);
       });
     }
   });
@@ -133,7 +133,7 @@ function processGroupEvents(data) {
   data.entry.forEach(function(entry){
     let group_id = entry.id;
     entry.changes.forEach(function(change){
-      console.log('Process Group Events AER 1601',group_id,change);
+      console.log('Process Group Events AER 1601 TEST GCP',group_id,change);
     });
   });
 }
@@ -153,11 +153,11 @@ let event_name = '';
   
     entry.changes.forEach(function(change){
 	   
-	console.log('Process User Events AER 1601-2',JSON.stringify(entry));    
+	console.log('Process User Events AER 1601-2 TEST GCP',JSON.stringify(entry));    
 	      
       console.log('User Change AER 11012019-2',group_id,change);
       console.log('group_id=' + group_id);	    
-      console.log('AER','This is my change = ' + JSON.stringify(change));	
+      console.log('AER','This is my change TEST GCP = ' + JSON.stringify(change));	
 	
 	    const https = require('https');
 console.log('field = ' + change.field);
@@ -266,7 +266,7 @@ console.log('attendeename = ' + attendee_name);
 	
 }
 else{
-console.log('1401-1-before returned value' );  
+console.log('1401-1-before returned value TEST GCP' );  
 
   https2.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec',(resp) => {
   let datashrek1101 = '';
