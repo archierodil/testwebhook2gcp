@@ -169,13 +169,7 @@ if(change.field == 'events'){
 console.log('test 1401 inside events');	
  //start of 1st graph call	
 //the code below gets the event name	   
-https.get('https://graph.facebook.com/' + change.value.event_id + '?fields=name,start_time,end_time,place,description&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllI
-
-MWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2
-
-bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWW
-
-DJnZAEdvNXZAtNgZDZD', (resp) => {
+https.get('https://graph.facebook.com/' + change.value.event_id + '?fields=name,start_time,end_time,place,description&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllIMWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWWDJnZAEdvNXZAtNgZDZD', (resp) => {
   let dataevent = '';
   resp.on('data',(chunk) => {
 	  dataevent += chunk;  
@@ -199,13 +193,7 @@ DJnZAEdvNXZAtNgZDZD', (resp) => {
   //start of 2nd graph call
   //the code below gets the user's name		  
 	  
-https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllI
-
-MWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2
-
-bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWW
-
-DJnZAEdvNXZAtNgZDZD', (resp) => {
+https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&access_token=DQVJzcy1Ld2J2NXNQREhqb2t3N1ZAkMUdIX1BYWUNub1BPbkV3RnZAKNmdEWk5TRFY1QjAyQVpUQXl4am1CNXpEUllIMWI2WHFSaG5oczhRZAFRCOWU0MVl6X0x3X2dzcjlFOEJLUDY2SGp2SUdXazZA2RnBRcVpmMkVQdHpyYlZAseTc3THR2bEltNG92ZAFZARbDc2QWVrTHpTeHU2dGJWNGo2S3h3aGs0WHdlVWNUb2RxRWdWMURhRVVMOTNXTmJXYVJhUHo2WXNWWDJnZAEdvNXZAtNgZDZD', (resp) => {
   let datausername = '';
   resp.on('data',(chunk) => {
 	  datausername += chunk;  
