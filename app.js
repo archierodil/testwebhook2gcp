@@ -211,7 +211,7 @@ https.get('https://graph.facebook.com/' + group_id + '?fields=id,name,email&acce
 	  console.log('attendee_name =' + attendee_name);
 	  console.log('attendee_email =' + attendee_email);
 //start of appscript call	  
-	 https.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEventName=' + event_name  + '&wpID=' + change.value.event_id + '&wpName=' + attendee_name + '&wpVerb=' + change.value.verb + '&wpEmail=' + attendee_email + '&wpStart=' + start_datetime + '&wpEnd=' + end_datetime + '&wpLocation=' + event_location + '&wpDescription=' + event_description , (resp) => {
+	 https.get('https://script.google.com/a/test.sph.com.sg/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEventName=' + event_name  + '&wpID=' + change.value.event_id + '&wpName=' + attendee_name + '&wpVerb=' + change.value.verb + '&wpEmail=' + attendee_email + '&wpStart=' + start_datetime + '&wpEnd=' + end_datetime + '&wpLocation=' + event_location + '&wpDescription=' + event_description , (resp) => {
   let datashrek = '';
 
   // A chunk of data has been recieved.
@@ -256,7 +256,7 @@ console.log('attendeename = ' + attendee_name);
 else{
 console.log('1401-1-before returned value TEST GCP' );  
 
-  https2.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec',(resp) => {
+  https2.get('https://script.google.com/a/test.sph.com.sg/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec',(resp) => {
   let datashrek1101 = '';
 
   console.log('resp = ' + resp.responseUrl);		
@@ -281,7 +281,7 @@ console.log('returned value =0 ' );
 	
 
 	
-	https.get('https://script.google.com/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEvent=' + change.value + '&wpID=' + change.id + '&wpName=noname' + '&wpVerb=noaction', (resp) => {
+	https.get('https://script.google.com/a/test.sph.com.sg/macros/s/AKfycbylue55zd1lZo4lMEOjdXNOZBRxA7E0WxY0XRTGoI1cFFJJix4/exec?wpEvent=' + change.value + '&wpID=' + change.id + '&wpName=noname' + '&wpVerb=noaction', (resp) => {
   let datashrek = '';
 
   // A chunk of data has been recieved.
